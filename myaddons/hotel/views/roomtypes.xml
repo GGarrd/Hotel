@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- list View -->
+        <record id="view_roomtypes_list" model="ir.ui.view">
+            <field name="name">hotel.roomtypes.list</field>
+            <field name="model">hotel.roomtypes</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_roomtypes_form" model="ir.ui.view">
+            <field name="name">hotel.roomtypes.form</field>
+            <field name="model">hotel.roomtypes</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <notebook>
+                            <page string="Daily Charges">
+                                <!-- Add fields or content for daily charges here -->
+                                <field name="daily_charge" />
+                                <field name="charge_description" />
+                            </page>
+                            <page string="Images">
+                                <group>
+                                    <field name="room_image" widget="image"/>
+                                    <field name="bathroom_image" widget="image"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_roomtypes" model="ir.actions.act_window">
+            <field name="name">Room Types</field>
+            <field name="res_model">hotel.roomtypes</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" ref="view_roomtypes_list"/>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="menu_hotel" name="Hotel"/>
+        <menuitem id="menu_roomtypes" name="Room Types" parent="menu_hotel" action="action_roomtypes"/>
+    </data>
+</odoo>
