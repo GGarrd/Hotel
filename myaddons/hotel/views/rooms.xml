@@ -3,29 +3,27 @@
     <data>
         <!-- List View Definition -->
         <record model="ir.ui.view" id="view_rooms_list">
-            <field name="name">Rooms</field>
+            <field name="name">Hotel Rooms</field>
             <field name="model">hotel.rooms</field>
             <field name="arch" type="xml">
                 <list>
                     <field name="name"/>
                     <field name="description"/>
-                    <field name="room_type_id"/>
-                    <field name="is_available"/>
+                    <field name="roomtype_id"/>
                 </list>
             </field>
         </record>
 
         <!-- Form View Definition -->
         <record model="ir.ui.view" id="view_rooms_form">
-            <field name="name">Room</field>
+            <field name="name">Hotel Room</field>
             <field name="model">hotel.rooms</field>
             <field name="arch" type="xml">
                 <form>
                     <group>
                         <field name="name"/>
                         <field name="description"/>
-                        <field name="room_type_id"/>
-                        <field name="is_available"/>
+                        <field name="roomtype_id"/>
                     </group>
                 </form>
             </field>
@@ -43,6 +41,6 @@
           id="hotel_menu_rooms"
           parent="menu_hotel_masterlists"
           action="action_hotel_rooms"
-          sequence="20"/>
+          sequence="10"/>
     </data>
 </odoo>
