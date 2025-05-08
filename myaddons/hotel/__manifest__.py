@@ -3,8 +3,8 @@
     'name': "Hotel Management System",
     'summary': "Hotel Management System",
     'description': "Hotel Guest Registration and Billing System",
-    'author': "Jez Cortez",
-    'website': "https://jezcortez.github.io/",
+    'author': "Edgar Delibo Jr.",
+    'website': "https://github.com/GGarrd/Hotel",
 
     'category': 'Uncategorized',
     'version': '11.0.0',
